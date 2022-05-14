@@ -6,4 +6,4 @@ WORKDIR /app
 
 COPY pipeline.py pipeline.py
 
-ENTRYPOINT [ "python", "pipeline" ]
+ENTRYPOINT [ "python", "pipeline.py" ]
