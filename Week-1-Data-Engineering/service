@@ -21,6 +21,6 @@ docker run -it \
   -e POSTGRES_USER="root" \
   -e POSTGRES_PASSWORD="root" \
   -e POSTGRES_DB="my_taxi_data" \
-  -v C:/Users/KUNLE/Desktop/MLOP-BootCamp/Data-Engineering/Week-1-Data-Engineering/my_postgres_data:/var/lib/postgresql/data \
+  -v C:/Users/KUNLE/Desktop/MLOP-BootCamp/Data-Engineering/Week-1-Data-Engineering/my_postgres_data:/Users/KUNLE/postgresql/data \
   -p 5432:5432 \
   postgres:13
