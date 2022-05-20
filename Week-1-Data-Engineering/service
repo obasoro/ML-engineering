@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+    
+
+# run postgres 
+
+docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="my_taxi_data" \
+  -v C:/Users/KUNLE/Desktop/MLOP-BootCamp/Data-Engineering/Week-1-Data-Engineering/my_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
